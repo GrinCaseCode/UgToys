@@ -61,20 +61,33 @@ if ( $(this).scrollTop() > 0 && $menu.hasClass("default") ){
 
 
 	//кнопка sandwich
-	$(".btn_nav").click(function() {
-		$(".sandwich").toggleClass("active");
-		if ($(".menu").is(":hidden")) {
-			$(".menu").slideDown(200);
+	$(".sandwich_menu").click(function() {
+		$(this).toggleClass("active");
+		$(".form-search").slideUp(200);
+		if ($(".menu-mobile").is(":hidden")) {
+			$(".menu-mobile").slideDown(200);
 		} else {
-			$(".menu").slideUp(200);
+			$(".menu-mobile").slideUp(200);
 		}
-		
 	});
 
-	$(".menu a").click(function() {
-		$(".menu").slideUp(200);
-		$(".sandwich").removeClass("active");
+	$(".btn-fixed_search").click(function(e) {
+		e.preventDefault();
+		if ($(".form-search").is(":hidden")) {
+			$(".form-search").slideDown(200);
+		} else {
+			$(".form-search").slideUp(200);
+		}
 	});
+
+	  $(document).mouseup(function (e){ 
+    var div = $(".form-search"); 
+    if (!div.is(e.target) 
+      && div.has(e.target).length === 0) { 
+    $(".form-search").slideUp(200);
+ }
+});
+
 
 
   /*input file*/
@@ -94,6 +107,14 @@ if ( $(this).scrollTop() > 0 && $menu.hasClass("default") ){
 		slidesToScroll: 1,
 		prevArrow: '<div class="slick-prev slick-arrow"><i class="fas fa-arrow-left"></i><div/>',
 		nextArrow: '<div class="slick-next slick-arrow"><i class="fas fa-arrow-right"></i><div/>',
+		responsive: [
+		{
+			breakpoint: 768,
+			settings: {
+				arrows: false,
+			}
+		}
+		]
 	});
 
 	$('.slider-catalog').slick({
@@ -116,6 +137,15 @@ if ( $(this).scrollTop() > 0 && $menu.hasClass("default") ){
 			breakpoint: 992,
 			settings: {
 				slidesToShow: 3,
+				slidesToScroll: 2,
+				dots: true,
+			}
+		},
+		{
+			breakpoint: 768,
+			settings: {
+				slidesToShow: 2,
+				slidesToScroll: 2,
 				arrows: false,
 				dots: true,
 			}
@@ -123,7 +153,8 @@ if ( $(this).scrollTop() > 0 && $menu.hasClass("default") ){
 		{
 			breakpoint: 480,
 			settings: {
-				slidesToShow: 2,
+				slidesToShow: 1,
+				slidesToScroll: 1,
 				arrows: false,
 				dots: true,
 			}
@@ -143,6 +174,20 @@ if ( $(this).scrollTop() > 0 && $menu.hasClass("default") ){
 	}); 
 
 	$(".input-phone").mask("+7 (999) 999-99-99");
+
+	{
+		if ($(window).width() < 992) { 
+			$(".footer__title").click(function() {
+				$(this).toggleClass("active");
+				$(this).next(".footer__content").slideToggle(200);
+			});
+		}
+	}
+
+	$(".menu-mobile .location-main__value").click(function() {
+	$(this).toggleClass("active");
+		$(".menu-mobile .location-main__dropdown").slideToggle(200);
+			});
 
 	jQuery('.quantity').each(function() {
 		var spinner = jQuery(this),
