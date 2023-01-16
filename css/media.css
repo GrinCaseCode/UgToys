@@ -180,18 +180,6 @@
 		line-height: 24px;
 		padding: 32px 40px;
 	}
-	.item-news__image {
-    height: 235px;
-}
-.item-news__title {
-    font-size: 22px;
-    line-height: 32px;
-    }
-    .item-news__date {
-    font-size: 14px;
-    line-height: 20px;
-    padding: 8px 11px;
-}
 }
 
 
@@ -311,12 +299,6 @@
 	}
 	.form-line .btn-main {
     width: 218px;
-}
-.item-news__image {
-    height: 210px;
-}
-.pager {
-	margin-top: 25px;
 }
 }
 /* Large Devices, Wide Screens */
@@ -532,16 +514,6 @@
 }
 .info-contacts a img {
 	margin-left: 12px;
-}
-.page-news .title-section {
-	padding-bottom: 20px;
-}
-.item-news__image {
-    height: 155px;
-}
-.item-news__title {
-    font-size: 20px;
-    line-height: 30px;
 }
 }
 
@@ -901,33 +873,6 @@
 .page-contacts .tabs a {
     padding: 0 21px;
 }
-.page-news {
-	padding-top: 20px;
-}
-.item-news__image {
-    height: 190px;
-}
-.prev.page-numbers {
-	left: 0;
-	right: auto;
-}
-.next.page-numbers {
-	right: 0;
-	left: auto;
-}
-.btn-call {
-	width: 40px;
-	height: 40px;
-	border-radius: 50%;
-	margin-left: auto;
-	margin-right: 15px;
-	font-size: 15px;
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	background: #F1FBFF;
-	color: #005B9E;
-}
 }
 
 /* Small Devices, Tablets */
@@ -1064,18 +1009,6 @@
 .form-line .btn-main {
 	width: 100%;
 }
-.item-news__image {
-    height: 230px;
-}
-.item-news {
-    margin-bottom: 25px;
-}
-.pager {
-    margin-top: 15px;
-}
-.page-news {
-	padding-bottom: 30px;
-}
 }
 
 /* Extra Small Devices, Phones */
@@ -1191,9 +1124,6 @@
 	.map-contact {
 		height: 300px;
 	} 
-	.item-news__image {
-    height: 200px;
-}
 }
 
 /* Custom, iPhone Retina */
@@ -1223,7 +1153,6 @@
 @media only screen and (min-width : 992px) {
 	.sandwich_menu,
 	.menu-mobile,
-	.btn-call,
 	.btn-fixed_search,
 	.buttons-fixed .btn-catalog {
 		display: none !important;
