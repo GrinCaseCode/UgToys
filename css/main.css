@@ -169,7 +169,7 @@ form {
 	font-size: 10px;
 	color: #005B9E;
 	position: absolute;
-	top: 4px;
+	top: 7px;
 	transition: all 0.3s;
 	left: 0; 
 } 
@@ -1761,4 +1761,101 @@ color: #005B9E;
 .prev.page-numbers:hover,
 .next.page-numbers:hover {
 	color: #00ADEE !important;
+}
+.article {
+	padding-bottom: 40px;
+}
+.article-billbord {
+	margin-bottom: 33px;
+	position: relative;
+}
+.article-billbord img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 15px;
+}
+.date-article {
+	font-weight: 500;
+font-size: 15px;
+line-height: 21px;
+padding: 10px 12px;
+background: #F1FBFF;
+border-radius: 8px;
+display: inline-block;
+bottom: 20px;
+left: 20px;
+color: #0F8FD3;
+	position: absolute;
+}
+.breadcrumbs {
+ padding: 25px 0;
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.breadcrumbs a {
+  color: #000;
+  border-bottom: 1px solid transparent;
+}
+.breadcrumbs a:hover {
+  border-color: #000;
+}
+.breadcrumbs li::after {
+  content: ">";
+  margin: 0 10px;
+}
+.breadcrumbs li:last-child::after {
+  display: none;
+}
+.article-content {
+	padding: 0 100px;
+}
+.article-content p {
+	margin-bottom: 20px;
+}
+.article-content h1 {
+	font-size: 40px;
+	line-height: 56px;
+	margin-bottom: 24px;
+	font-family: 'Rotonda';
+	font-weight: 700;
+	color: #005B9E;
+}
+.article-content h2 {
+	font-size: 24px;
+	line-height: 38px;
+	margin-bottom: 24px;
+	font-weight: 500;
+}
+.article-content h3 {
+	font-size: 18px;
+	line-height: 29px;
+	margin-bottom: 30px;
+	font-weight: 500;
+}
+.article-content p a {
+	color: #292D32;
+	border-bottom: 1px solid #292D32;
+}
+.article-content p a:hover {
+	border-color: transparent;
+}
+.article-content strong {
+	font-weight: 500;
+}
+.article-content ul li {
+	padding-left: 15px;
+	margin-bottom: 20px;
+	position: relative;
+}
+.article-content ul li::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: "•";
+}
+.footer__logo {
+	margin-bottom: 45px;
 }
