@@ -209,6 +209,15 @@
 	.article-content p {
 		margin-bottom: 15px;
 	}
+	.item-review {
+    font-size: 16px;
+    line-height: 23px;
+    padding: 32px 45px;
+    padding-right: 30px;
+}
+.item-review .title-block {
+    padding-bottom: 15px;
+    }
 }
 
 
@@ -335,6 +344,12 @@
 	.pager {
 		margin-top: 25px;
 	}
+	.item-review {
+    font-size: 15px;
+    line-height: 21px;
+    padding: 25px 30px;
+    padding-right: 20px;
+}
 }
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
@@ -581,6 +596,23 @@
 	.breadcrumbs {
 		padding: 15px 0;
 	}
+	.page-reviews {
+    padding-top: 25px;
+    padding-bottom: 35px;
+}
+.page-reviews .title-section {
+    padding-bottom: 16px;
+    }
+    .item-review {
+    font-size: 14px;
+    line-height: 20px;
+}
+.row_reviews > div {
+    margin-bottom: 25px;
+}
+.btn-main_simple {
+    height: 50px;
+}
 }
 
 /* Medium Devices, Desktops */
@@ -994,6 +1026,9 @@
 	.article {
 		padding-bottom: 25px;
 	}
+	.footer {
+		padding-bottom: 50px;
+	}
 }
 
 /* Small Devices, Tablets */
@@ -1299,6 +1334,17 @@
 		border-radius: 0;
 		font-family: 'object-fit: cover;';
 	}
+	.page-reviews {
+    padding-top: 20px;
+}
+.item-review {
+    padding: 20px 20px;
+    padding-right: 15px;
+    border-radius: 10px;
+}
+.item-review__bottom {
+	justify-content: flex-start;
+}
 }
 
 /* Custom, iPhone Retina */
