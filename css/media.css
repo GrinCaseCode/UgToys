@@ -1333,7 +1333,7 @@
 		justify-content: center;
 		transition: all 0.3s;
 	}
-	.menu-catalog > li.active > a {
+	.menu-catalog > li.active > a::after {
 		transform: rotate(180deg);
 	}
 	.billbord-dropdown {
