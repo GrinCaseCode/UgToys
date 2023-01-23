@@ -983,6 +983,7 @@
 		width: 100%;
 		display: flex;
 		align-items: center;
+		z-index: 900;
 		justify-content: space-around;
 		background-color: #0F8FD3;
 	}
