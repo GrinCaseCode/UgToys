@@ -8,7 +8,7 @@ var navbarHeight = $('.header').outerHeight();
 $(window).scroll(function(event){
 	didScroll = true;
 });
- 
+
 setInterval(function() {
 	if (didScroll) {
 		hasScrolled();
@@ -28,6 +28,12 @@ function hasScrolled() {
     if (st > lastScrollTop && st > navbarHeight){
         // Scroll Down
         $('.header').removeClass('nav-down').addClass('nav-up');
+        {
+        	if ($(window).width() > 992) { 
+        		$(".catalog-dropdown").slideUp(200);
+        		$(".btn-catalog").find(".sandwich").removeClass("active");
+        	}
+        }
     } else {
         // Scroll Up
         if(st + $(window).height() < $(document).height()) {
@@ -62,6 +68,8 @@ if ( $(this).scrollTop() > 0 && $menu.hasClass("default") ){
 
 	//кнопка sandwich
 	$(".sandwich_menu").click(function() {
+		$(".catalog-dropdown").slideUp(200);
+		$(".btn-catalog").find(".sandwich").removeClass("active");
 		$(this).toggleClass("active");
 		$(".form-search").slideUp(200);
 		if ($(".menu-mobile").is(":hidden")) {
@@ -70,6 +78,44 @@ if ( $(this).scrollTop() > 0 && $menu.hasClass("default") ){
 			$(".menu-mobile").slideUp(200);
 		}
 	});
+
+	//кнопка sandwich
+	$(".btn-catalog").click(function() {
+		$(this).find(".sandwich").toggleClass("active");
+		if ($(".catalog-dropdown").is(":hidden")) {
+			$(".catalog-dropdown").slideDown(200);
+		} else {
+			$(".catalog-dropdown").slideUp(200);
+		}
+		
+	});
+
+	{
+		if ($(window).width() > 992) { 
+			$(".menu-catalog > li > a").click(function(e) {
+				e.preventDefault();
+				$(".content-dropdown").fadeOut(200);
+				$(".menu-catalog > li").removeClass("active");
+				$(this).siblings(".content-dropdown").fadeIn(200);
+				$(this).parent().addClass("active");
+			});
+		}
+	}
+
+	{
+		if ($(window).width() < 992) { 
+			$(".content-dropdown").fadeOut(200);
+			$(".menu-catalog > li").removeClass("active");
+			$(".menu-catalog > li > a").click(function(e) {
+				e.preventDefault();
+				$(this).parent().siblings("li").find(".content-dropdown").slideUp(0);
+				$(this).parent().siblings("li").removeClass("active");
+				$(this).siblings(".content-dropdown").slideToggle(200);
+				$(this).parent().toggleClass("active");
+			});
+		}
+	}
+
 
 	$(".btn-fixed_search").click(function(e) {
 		e.preventDefault();
@@ -80,22 +126,16 @@ if ( $(this).scrollTop() > 0 && $menu.hasClass("default") ){
 		}
 	});
 
-	  $(document).mouseup(function (e){ 
-    var div = $(".form-search"); 
-    if (!div.is(e.target) 
-      && div.has(e.target).length === 0) { 
-    $(".form-search").slideUp(200);
- }
-});
 
 
 
-  /*input file*/
-  $("input[type='file']").change(function(){
-    var filename_text = $(this).parent().siblings(".name-upload");
-    var filename = $(this).val().replace(/.*\\/, "");
-    filename_text.html(filename);
-  });
+
+	/*input file*/
+	$("input[type='file']").change(function(){
+		var filename_text = $(this).parent().siblings(".name-upload");
+		var filename = $(this).val().replace(/.*\\/, "");
+		filename_text.html(filename);
+	});
 	//слайдер
 
 	$('.slider-billbord').slick({
@@ -191,6 +231,15 @@ if ( $(this).scrollTop() > 0 && $menu.hasClass("default") ){
 		var selectTab = $(this).attr("href");
 		$(selectTab).fadeIn(200);
 		$(this).parent().parent().siblings().find(".slider-catalog").slick('refresh');
+	});
+
+	$('.tabs-form li a').click(function(event) {
+		event.preventDefault();
+		$(this).parent().parent().find("li").removeClass('active');
+		$(this).parent().addClass('active');
+		$(this).parent().parent().siblings().find(".tab-pane-form").fadeOut(0);
+		var selectTab2 = $(this).attr("href");
+		$(selectTab2).fadeIn(200);
 	}); 
 
 	$(".input-phone").mask("+7 (999) 999-99-99");
@@ -201,13 +250,21 @@ if ( $(this).scrollTop() > 0 && $menu.hasClass("default") ){
 				$(this).toggleClass("active");
 				$(this).next(".footer__content").slideToggle(200);
 			});
+
+			$(document).mouseup(function (e){ 
+				var div = $(".form-search"); 
+				if (!div.is(e.target) 
+					&& div.has(e.target).length === 0) { 
+					$(".form-search").slideUp(200);
+			}
+		});
 		}
 	}
 
 	$(".menu-mobile .location-main__value").click(function() {
-	$(this).toggleClass("active");
+		$(this).toggleClass("active");
 		$(".menu-mobile .location-main__dropdown").slideToggle(200);
-			});
+	});
 
 	jQuery('.quantity').each(function() {
 		var spinner = jQuery(this),
