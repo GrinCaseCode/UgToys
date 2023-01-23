@@ -81,6 +81,8 @@ if ( $(this).scrollTop() > 0 && $menu.hasClass("default") ){
 
 	//кнопка sandwich
 	$(".btn-catalog").click(function() {
+		$(".menu-mobile").slideUp(200);
+		$(".sandwich_menu").removeClass("active");
 		$(this).find(".sandwich").toggleClass("active");
 		if ($(".catalog-dropdown").is(":hidden")) {
 			$(".catalog-dropdown").slideDown(200);
