@@ -1698,7 +1698,7 @@
 	}
 	.partnership-form__bottom .btn-main {
 		padding: 0 50px;
-		margin-top: 20px;
+		margin-top: 35px;
 	}
 	.partnership-toy {
 		left: -105px;
@@ -1888,8 +1888,16 @@
 	.page-categories .item-category {
 		padding: 20px 15px;
 	}
+	.page-categories .item-category .item-category__title {
+		max-width: 100%;
+		text-align: center;
+	}
 	.item-category__left .item-category__image img {
 		max-width: 160px;
+		margin: 0 auto;
+	}
+	.item-category .row > div:not(:first-child) .item-category__subtitle {
+		padding-top: 15px;
 	}
 	.item-category_8 .item-category__left .item-category__image {
 		justify-content: flex-start;
