@@ -342,6 +342,13 @@ if ( $(this).scrollTop() > 0 && $menu.hasClass("default") ){
 		$(selectTab3).fadeIn(200);
 	}); 
 
+	  $(".item-question__head").click(function() {
+  $(this).parent().toggleClass("active");
+  $(this).siblings().slideToggle(200);
+  $(this).parent().siblings(".item-question").removeClass("active");
+  $(this).parent().siblings(".item-question").find(".item-question__content").slideUp(200);
+});
+
 	$(".input-phone").mask("+7 (999) 999-99-99");
 
 	{
