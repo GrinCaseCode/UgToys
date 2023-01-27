@@ -353,6 +353,9 @@
 		padding: 0 20px;
 		padding-bottom: 15px;
 	}
+	.row_catalog .item-catalog .btn-main {
+		font-size: 12px;
+	}
 }
 
 
@@ -1923,6 +1926,9 @@
 	.section-text {
 		padding-bottom: 30px;
 	} 
+	.row_catalog .item-catalog .btn-main {
+    font-size: 13px;
+}
 }
 
 /* Extra Small Devices, Phones */

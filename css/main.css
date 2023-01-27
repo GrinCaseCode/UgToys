@@ -2801,6 +2801,9 @@ input[type=number]
 .item-sidebar__content li {
 	margin-bottom: 15px;
 }
+.item-sidebar__content li a {
+	color: #292D32;
+}
 .item-sidebar {
 	border-bottom: 1px solid #CBE5EE;
 }
