@@ -4311,3 +4311,20 @@ background-image: url(../img/bg_newyear.png);
 	color: #005b9e;
 	font-weight: 700;
 }
+.price-card {
+	gap: 11px;
+	font-size: 13px;
+	margin-top: 6px;
+	margin-bottom: 16px;
+	line-height: 140%;
+	font-weight: 500;
+	display: flex;
+	align-items: center;
+}
+.price-card strong {
+	font-size: 24px;
+	line-height: 140%;
+	color: #005b9e;
+	font-weight: 600;
+	opacity: 0.8;
+}

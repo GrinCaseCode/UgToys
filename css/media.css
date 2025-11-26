@@ -456,6 +456,9 @@
 		width: 37px;
 		height: auto;
 	}
+	.price-card strong {
+    	font-size: 22px;
+	}
 }
 
 
